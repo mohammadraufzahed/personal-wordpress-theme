@@ -21,6 +21,7 @@ function personal_theme_add_scripts() {
 
 function personal_theme_add_styles() {
 	wp_enqueue_style('main_style', get_template_directory_uri() . '/dist/styles/main.css');
+	wp_enqueue_style('tailwind_style', get_template_directory_uri() . '/dist/styles/tailwind.css', ['main_style'], time());
 }
 
 add_action('wp_enqueue_scripts', 'personal_theme_add_scripts');
