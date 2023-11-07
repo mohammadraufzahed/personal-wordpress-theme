@@ -1,3 +1,3 @@
-import Alpinejs from "alpinejs";
+import "./bootstrap/alpine";
 
-window.Alpinejs = Alpinejs;
+console.log("Bootstrapping finished.");

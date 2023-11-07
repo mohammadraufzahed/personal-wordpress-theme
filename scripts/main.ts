@@ -1,1 +1,1 @@
-import "./bootstrap";
+console.log("Main function executed");
