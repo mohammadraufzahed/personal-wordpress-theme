@@ -15,6 +15,9 @@ module.exports = {
       maxWidth: {
         screen: "1376px",
       },
+      lineHeight: {
+        header: '165%',
+      },
       borderRadius: {
         box: 10,
       },
