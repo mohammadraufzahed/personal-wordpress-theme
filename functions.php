@@ -13,6 +13,18 @@
  * to load your dependencies and initialize Timber. If you are using Timber via the WordPress.org
  * plug-in, you can safely delete this block.
  */
+
+function personal_theme_add_scripts() {
+    wp_enqueue_script('theme_main_script', get_template_directory_uri() . '/dist/main.js');
+}
+
+function personal_theme_add_styles() {
+	wp_enqueue_style('main_style', get_template_directory_uri() . '/dist/main.css');
+}
+
+add_action('wp_enqueue_scripts', 'personal_theme_add_scripts');
+add_action('wp_enqueue_scripts','personal_theme_add_styles');
+
 $composer_autoload = __DIR__ . '/vendor/autoload.php';
 if ( file_exists( $composer_autoload ) ) {
 	require_once $composer_autoload;

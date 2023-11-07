@@ -1,0 +1,29 @@
+{
+  "name": "personal-theme",
+  "version": "1.0.0",
+  "description": "The \"_s\" for Timber: a dead-simple theme that you can build from. The primary purpose of this theme is to provide a file structure rather than a framework for markup or styles. Configure your Sass, scripts, and task runners however you would like!",
+  "main": "index.js",
+  "directories": {},
+  "scripts": {
+    "dev:ts": "tsc --watch",
+    "dev": "concurrently \"npm run dev:ts\" \"npm run tailwind:dev\"",
+    "tailwind:dev": "tailwindcss -i ./styles/main.scss -o ./dist/main.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/alpinejs": "^3.13.5",
+    "@types/node": "^20.8.10",
+    "autoprefixer": "^10.4.16",
+    "concurrently": "^8.2.2",
+    "postcss": "^8.4.31",
+    "sass": "^1.69.5",
+    "tailwindcss": "^3.3.5",
+    "typescript": "^5.2.2",
+    "vite": "^4.5.0"
+  },
+  "dependencies": {
+    "alpinejs": "^3.13.2"
+  }
+}
