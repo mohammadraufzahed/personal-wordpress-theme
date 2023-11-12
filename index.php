@@ -13,11 +13,49 @@
  * @since   Timber 0.1
  */
 
-$context          = Timber::context();
+$context = Timber::context();
 $context['posts'] = new Timber\PostQuery();
-$context['foo']   = 'bar';
-$templates        = array( 'index.twig' );
-if ( is_home() ) {
-	array_unshift( $templates, 'front-page.twig', 'home.twig' );
+$context['skills'] = [
+	[
+		'name' => 'TypeScript',
+		'color' => '#007ACC',
+	],
+	[
+		'name' => 'Django',
+		'color' => '#092E20',
+	],
+	[
+		'name' => 'React',
+		'color' => '#4F5D95',
+	],
+	[
+		'name' => 'VueJS',
+		'color' => '#41B883',
+	],
+	[
+		'name' => 'PHP',
+		'color' => '#4F5D95',
+	],
+	[
+		'name' => 'Laravel',
+		'color' => '#FF2D20',
+	],
+	[
+		'name' => 'NestJS',
+		'color' => '#E0234E',
+	],
+	[
+		'name' => 'React Native',
+		'color' => '#61DAFB',
+	],
+	[
+		'name' => 'Python',
+		'color' => '#306998',
+	],
+];
+$templates = array('index.twig');
+
+if (is_home()) {
+	array_unshift($templates, 'front-page.twig', 'home.twig');
 }
-Timber::render( $templates, $context );
+Timber::render($templates, $context);

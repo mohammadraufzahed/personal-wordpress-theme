@@ -7,10 +7,7 @@
   "directories": {},
   "scripts": {
     "dev:ts": "vite build --watch",
-    "dev": "concurrently \"npm run dev:ts\" \"npm run css:dev\"",
-    "css:dev": "concurrently \"npm run tailwind:dev\" \"npm run styles:dev\"",
-    "styles:dev": "sass ./styles/main.scss:./dist/styles/main.css --watch",
-    "tailwind:dev": "tailwindcss -i ./styles/tailwind.scss -o ./dist/styles/tailwind.css --watch"
+    "dev": "concurrently \"npm run dev:ts\""
   },
   "keywords": [],
   "author": "",
@@ -27,6 +24,7 @@
     "vite": "^4.5.0"
   },
   "dependencies": {
-    "alpinejs": "^3.13.2"
+    "alpinejs": "^3.13.2",
+    "keen-slider": "^6.8.6"
   }
 }
